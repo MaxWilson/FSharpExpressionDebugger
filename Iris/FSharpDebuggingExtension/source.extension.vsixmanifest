@@ -15,9 +15,7 @@
         <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.0,17.0)" DisplayName="Visual Studio core editor" />
         <Prerequisite Id="Microsoft.VisualStudio.Debugger" Version="[15.0,)" DisplayName="Visual Studio Debugger" />
     </Prerequisites>
-  <Assets>
-    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
-    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%"  Path="FSharpDebuggingExtension.pkgdef" />
-    <Asset Type="DebuggerEngineExtension" d:Source="Project" d:ProjectName="%CurrentProject%" Path="FSharpDebuggingExtension.vsdconfig" />
-  </Assets>
+    <Assets>
+        <Asset Type="DebuggerEngineExtension" d:Source="Project" d:ProjectName="FSharpDebugging" Path="|FSharpDebugging|" />
+    </Assets>
 </PackageManifest>
