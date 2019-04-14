@@ -22,9 +22,6 @@
   </ItemGroup>
   <ItemGroup>
     <VsdConfigXmlFiles Include="FSharpExpressionCompiler.vsdconfigxml" />
-    <VSIXSourceItem Include="$(VsdConfigFile)">
-      <VSIXSubPath>$(AssemblyVSIXSubPath)</VSIXSubPath>
-    </VSIXSourceItem>
   </ItemGroup>
   <PropertyGroup>
     <VsdConfigFile>$(OutputPath)FSharpExtension.vsdconfig</VsdConfigFile>

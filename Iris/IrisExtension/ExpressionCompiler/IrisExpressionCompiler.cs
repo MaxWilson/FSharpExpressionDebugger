@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using Microsoft.VisualStudio.Debugger;
 using Microsoft.VisualStudio.Debugger.Clr;
 using Microsoft.VisualStudio.Debugger.ComponentInterfaces;
 using Microsoft.VisualStudio.Debugger.Evaluation;
@@ -50,6 +51,14 @@ namespace IrisExtension.ExpressionCompiler
             out string error,
             out DkmCompiledClrInspectionQuery result)
         {
+            var x = 5;
+            if(1+2<=x)
+            {
+                var expr = "1+2";
+                DkmLanguageExpression.Create(expression.Language, expression.CompilationFlags, expr, null)
+                        .CompileExpression(instructionAddress, inspectionContext, out error, out result);
+                return;
+            }
             error = null;
             result = null;
             using (DebugCompilerContext context = ContextFactory.CreateExpressionContext(inspectionContext, instructionAddress, expression.Text))
