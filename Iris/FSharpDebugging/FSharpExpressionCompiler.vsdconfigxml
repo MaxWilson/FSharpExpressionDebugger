@@ -19,12 +19,13 @@
     AssemblyName="FSharpDebugging"
     Synchronized="true">
 
-    <Class Name="FSharpDebugging.Class1">
+    <Class Name="FSharpDebugging.ExpressionCompiler">
       <Implements>
         <InterfaceGroup>
-          <Filter>
+          <!--<Filter>
             <LanguageId RequiredValue="guidFSharpLanguageId"/>
-          </Filter>
+          </Filter>-->
+          <NoFilter/> <!--LanguageID filter doesn't seem to work for F#-->
           <Interface Name="IDkmClrExpressionCompiler"/>
         </InterfaceGroup>
       </Implements>

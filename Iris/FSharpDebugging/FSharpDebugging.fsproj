@@ -5,7 +5,7 @@
     <TargetFramework>net472</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Library1.fs" />
+    <Compile Include="ExpressionCompiler.fs" />
     <None Include="Script.fsx" />
     <Content Include="packages.config" />
   </ItemGroup>
@@ -22,6 +22,9 @@
   </ItemGroup>
   <ItemGroup>
     <VsdConfigXmlFiles Include="FSharpExpressionCompiler.vsdconfigxml" />
+    <VSIXSourceItem Include="$(VsdConfigFile)">
+      <VSIXSubPath>$(AssemblyVSIXSubPath)</VSIXSubPath>
+    </VSIXSourceItem>
   </ItemGroup>
   <PropertyGroup>
     <VsdConfigFile>$(OutputPath)FSharpExtension.vsdconfig</VsdConfigFile>
