@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="FSharpDebuggingExtension.d01e2065-9b92-430c-a6c1-7a2c6b0ea1bd" Version="1.0" Language="en-US" Publisher="Maximilian Wilson" />
+        <Identity Id="FSharpDebuggingExtension.d01e2065-9b92-430c-a6c1-7a2c6b0ea1bd" Version="1.1" Language="en-US" Publisher="Maximilian Wilson" />
         <DisplayName>FSharpDebuggingExtension</DisplayName>
         <Description xml:space="preserve">F# expression support for VisualStudio Debugger, and related functionality</Description>
     </Metadata>
