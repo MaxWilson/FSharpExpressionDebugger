@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="FSharpDebuggingExtension.1ea2f7f9-3bb2-4f71-9ef4-abbf81ebcd3e" Version="0.1" Language="en-US" Publisher="Maximilian Wilson" />
+    <DisplayName>FSharpDebuggingExtension</DisplayName>
+    <Description xml:space="preserve">F# expression support for VisualStudio Debugger, and related functionality</Description>
+    </Metadata>
+    <Installation>
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0, 16.0)" />
+    </Installation>
+    <Dependencies>
+        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    </Dependencies>
+    <Prerequisites>
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.0,17.0)" DisplayName="Visual Studio core editor" />
+        <Prerequisite Id="Microsoft.VisualStudio.Debugger" Version="[15.0,)" DisplayName="Visual Studio Debugger" />
+    </Prerequisites>
+    <Assets>
+        <Asset Type="DebuggerEngineExtension" d:Source="Project" d:ProjectName="FSharpDebugging" Path="|FSharpDebugging|" />
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="FSharpDebugging" Path="FSharpDebugging.vsdconfig" />
+    </Assets>
+</PackageManifest>
