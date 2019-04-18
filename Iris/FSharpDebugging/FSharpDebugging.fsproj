@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFramework>net452</TargetFramework>
+    <OutputPath>bin/$(Configuration)</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ExpressionCompiler.fs" />
@@ -22,13 +23,7 @@
   </ItemGroup>
   <ItemGroup>
     <VsdConfigXmlFiles Include="FSharpExpressionCompiler.vsdconfigxml" />
-    <VSIXSourceItem Include="$(VsdConfigFile)">
-      <VSIXSubPath>$(AssemblyVSIXSubPath)</VSIXSubPath>
-    </VSIXSourceItem>
   </ItemGroup>
-  <PropertyGroup>
-    <VsdConfigFile>$(OutputPath)FSharpExtension.vsdconfig</VsdConfigFile>
-  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

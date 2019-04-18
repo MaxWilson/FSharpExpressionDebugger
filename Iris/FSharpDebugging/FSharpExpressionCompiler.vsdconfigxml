@@ -11,7 +11,7 @@
 <Configuration xmlns="http://schemas.microsoft.com/vstudio/vsdconfig/2008">
 
   <DefineGuid Name="guidFSharpExpressionCompilerComponentId" Value="923EF775-55D4-4AEE-BB17-4A74893D9EC9"/>
-  <DefineGuid Name="guidFSharpLanguageId" Value="994B45C4-E6E9-11D2-903F-00C04FA302A1"/>
+  <DefineGuid Name="guidFSharpLanguageId" Value="ab4f38c9-b6e6-43ba-be3b-58080b2ccce3"/>
 
   <ManagedComponent
     ComponentId="guidFSharpExpressionCompilerComponentId"

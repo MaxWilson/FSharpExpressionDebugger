@@ -17,5 +17,6 @@
     </Prerequisites>
     <Assets>
         <Asset Type="DebuggerEngineExtension" d:Source="Project" d:ProjectName="FSharpDebugging" Path="|FSharpDebugging|" />
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="FSharpDebugging" Path="FSharpDebugging.vsdconfig" />
     </Assets>
 </PackageManifest>
