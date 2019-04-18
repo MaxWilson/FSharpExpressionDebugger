@@ -14,10 +14,10 @@ type ExpressionCompiler() =
     interface IDkmClrExpressionCompiler with
         member this.CompileExpression(expr, addr, ctx, error, result) = 
             if expr.Text = "x" then
-                error <- "You didn't say the magic word, did you?"
+                error <- "Hello world from F#."
             elif expr.Text = "y" && expr.GetDataItem<Tracker>() |> box = null then
                 // evaluate "42" in C#
-                let e = DkmLanguageExpression.Create(expr.Language, expr.CompilationFlags, "42*10", Tracker())
+                let e = DkmLanguageExpression.Create(expr.Language, expr.CompilationFlags, "42*42", Tracker())
                 e.CompileExpression(addr, ctx, &error, &result)
             else
                 // fall through

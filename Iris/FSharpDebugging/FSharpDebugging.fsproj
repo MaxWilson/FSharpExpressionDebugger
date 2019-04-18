@@ -2,8 +2,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFramework>net452</TargetFramework>
+    <TargetFramework>net472</TargetFramework>
     <OutputPath>bin/$(Configuration)</OutputPath>
+    <VSDConfigToolVersion>16.0.2032702</VSDConfigToolVersion>
+    <ConcordPackageVersion>15.9.28307</ConcordPackageVersion>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ExpressionCompiler.fs" />
@@ -11,19 +13,27 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.VSSDK.Debugger.VSDConfigTool" Version="16.0.2032702">
+    <PackageReference Include="Microsoft.VSSDK.Debugger.VSDConfigTool" Version="$(VSDConfigToolVersion)">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Debugger.Engine" Version="16.0.2032702">
+    <PackageReference Include="Microsoft.VisualStudio.Debugger.Engine" Version="$(ConcordPackageVersion)">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Debugger.Metadata" Version="16.0.2032702">
+    <PackageReference Include="Microsoft.VisualStudio.Debugger.Metadata" Version="$(ConcordPackageVersion)">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="System.Collections.Immutable" Version="1.3.1">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="System.Reflection.Metadata" Version="1.4.2">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <VsdConfigXmlFiles Include="FSharpExpressionCompiler.vsdconfigxml" />
   </ItemGroup>
+  <Target Name="PkgdefProjectOutputGroup">
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

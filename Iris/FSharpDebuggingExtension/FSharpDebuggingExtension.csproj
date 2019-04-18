@@ -85,7 +85,7 @@
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
-    <VsdConfigFile>$(OutputPath)FSharpExtension.vsdconfig</VsdConfigFile>
+    <VsdConfigFile>..\FSharpDebugging\bin\$(Configuration)\net472\FSharpDebugging.vsdconfig</VsdConfigFile>
   </PropertyGroup>
   <ItemGroup>
     <VSIXSourceItem Include="$(VsdConfigFile)">
