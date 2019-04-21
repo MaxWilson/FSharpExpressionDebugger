@@ -9,7 +9,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ExpressionCompiler.fs" />
+    <None Include="Script1.fsx" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <PackageReference Include="FSharp.Compiler.Service" Version="28.0.0" />
     <PackageReference Include="Microsoft.VSSDK.Debugger.VSDConfigTool" Version="$(VSDConfigToolVersion)">
