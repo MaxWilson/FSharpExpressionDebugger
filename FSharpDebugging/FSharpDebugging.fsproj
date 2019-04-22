@@ -8,6 +8,7 @@
     <ConcordPackageVersion>15.9.28307</ConcordPackageVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Translator.fs" />
     <Compile Include="ExpressionCompiler.fs" />
     <None Include="Script1.fsx" />
   </ItemGroup>
