@@ -2,7 +2,7 @@ While debugging in Visual Studio, would you rather write this:
 
 ```
 Microsoft.Fharp.Collections.List.Map<int>(
-    Microsoft.FSharp.Core.FuncConvert.ToFsharpFunc<int, int>(
+    Microsoft.FSharp.Core.FuncConvert.ToFSharpFunc<int, int>(
         x => f.Invoke(x)), myList)
 ```
 
