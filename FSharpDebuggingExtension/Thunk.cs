@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +13,7 @@ namespace FSharpDebuggingExtension
         {
             Func<int, int> f = a => -a;
             var vs = Microsoft.FSharp.Collections.ListModule.OfSeq<int>(new[] { 1, 2, 3 });
-            Microsoft.FSharp.Collections.ListModule.Map<int, int>(Microsoft.FSharp.Core.FuncConvert.FromFunc<int, int>(v => f.Invoke(v)), vs);
+            Microsoft.FSharp.Collections.ListModule.Map<int, int>(Microsoft.FSharp.Core.FuncConvert.ToFSharpFunc<int, int>(v => f.Invoke(v)), vs);
         }
     }
 }
