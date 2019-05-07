@@ -1,3 +1,5 @@
+using Microsoft.VisualStudio.Debugger.Evaluation;
+using Microsoft.VisualStudio.Debugger.Evaluation.ClrCompilation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +13,6 @@ namespace FSharpDebuggingExtension
     {
         public void Test()
         {
-            Func<int, int> f = a => -a;
-            var vs = Microsoft.FSharp.Collections.ListModule.OfSeq<int>(new[] { 1, 2, 3 });
-            Microsoft.FSharp.Collections.ListModule.Map<int, int>(Microsoft.FSharp.Core.FuncConvert.ToFSharpFunc<int, int>(v => f.Invoke(v)), vs);
         }
     }
 }

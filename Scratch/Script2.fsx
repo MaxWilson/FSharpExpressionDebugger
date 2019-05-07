@@ -1,3 +1,5 @@
+open System.Runtime.Serialization.Formatters.Binary
+
 #I "bin\\Debug"
 #r "FSharp.Compiler.Service.dll"
 open System.IO
@@ -36,10 +38,27 @@ let errors1b, exitCode1b =
 let errors2, exitCode2, dynAssembly2 = 
     checker.CompileToDynamicAssembly([| "-o"; fn3; "-a"; fn2 |], execute=None)
      |> Async.RunSynchronously
-
+let toBytes x =
+    use str = new MemoryStream()
+    let fmt = new BinaryFormatter()
+    fmt.Serialize(str, x)
+    str.ToArray()
 (*
 Passing 'Some' for the 'execute' parameter executes  the initiatlization code for the assembly.
 *)
 let errors3, exitCode3, dynAssembly3 = 
     checker.CompileToDynamicAssembly([| "-o"; fn3; "-a"; fn2 |], Some(stdout,stderr))
-     |> Async.RunSynchronously
+    |> Async.RunSynchronously
+
+checker.Compile([|"fsc.exe"; "-o"; fn3; "-a"; fn2|]) |> Async.RunSynchronously
+File.WriteAllText(fn2, """
+module M
+
+type C() = 
+   member x.P = 1
+
+let x = 3 + 4
+""")
+
+System.IO.File.Delete fn3
+fn3
